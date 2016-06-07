@@ -2,10 +2,10 @@
 * FileName: app.js
 *
 * @author Meer
-* @date june 6, 2016
+* @date june 7, 2016
 *
 * StudentID: 300522487
-* website: azure link
+* website: http://comp125-lab3.azurewebsites.net/
 * @description: This file is the main javascript file for the website
 */
 // IIFE - Immediately Invoked Function Expression
