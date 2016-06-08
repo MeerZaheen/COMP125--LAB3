@@ -46,9 +46,12 @@
      * @returns {void}
      */
     function InitialText() {
-        var paragraph = document.getElementsByTagName("p")[0];
+        var parentElement = document.querySelector("div.row");
 
-        paragraph.textContent = "This is my first paragraph on the " + document.title + " page";
+        var secondParagraph = document.createElement("p");
+        secondParagraph.textContent = "second paragraph";
+
+        parentElement.appendChild(secondParagraph);       
     }
 
     /**
