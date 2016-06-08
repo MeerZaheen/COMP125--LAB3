@@ -20,7 +20,7 @@
     * @function PageSwitcher
     * @returns {void}
     */
-    function Pageswitcher() {
+    function PageSwitcher() {
 
         // for console used for testing
         switch (document.title) {
@@ -38,42 +38,62 @@
                 break;
         }
     }
-    /*
-    * This function provides JavaScript codes for the Home Page
-    *
-    * @function Home
-    * @returns {void}
-    */
-    function Home() {
-        console.log("You are at the Home Page");
+    /**
+     * This function injects some text into the first paragraph of a page based on it's 
+     * document.title property
+     * 
+     * @function InitialText
+     * @returns {void}
+     */
+    function InitialText() {
+        var paragraph = document.getElementsByTagName("p")[0];
+
+        paragraph.textContent = "This is my first paragraph on the " + document.title + " page";
     }
-    /*
-    * This function provides JavaScript codes for the About Page
-    *
-    * @function Home
+
+    /**
+     * This function provides JavaScript code for the Home page
+     * 
+     * @function Home
+     * @returns {void}
+     */
+    function Home() {
+        InitialText();
+
+        var firstPargraph = document.querySelectorAll("div.row p")[0];
+
+        firstPargraph.style.color = "red";
+    }
+
+    /**
+    * This function provides JavaScript code for the About page
+    * 
+    * @function About
     * @returns {void}
     */
     function About() {
-        console.log("You are at the About Me Page");
+        InitialText();
     }
-    /*
-    * This function provides JavaScript codes for the Contact Page
-    *
-    * @function Home
+
+    /**
+    * This function provides JavaScript code for the Contact page
+    * 
+    * @function Contact
     * @returns {void}
     */
     function Contact() {
-        console.log("You are at the Contact Page");
-    }/*
-    * This function provides JavaScript codes for the Project Page
-    *
-    * @function Home
+
+    }
+
+    /**
+    * This function provides JavaScript code for the Projects page
+    * 
+    * @function Projects
     * @returns {void}
     */
     function Projects() {
-        console.log("You are at the Projects Page");
+        InitialText();
     }
-
     // for console used for testing: console.log(document.URL);
     // document.body.onload = PageSwitcher;
     // document.body.addEventListener("load", Pageswitcher);
